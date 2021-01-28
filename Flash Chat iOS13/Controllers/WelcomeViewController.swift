@@ -16,9 +16,11 @@ class WelcomeViewController: UIViewController {
 //    let text = "⚡️FlashChat"
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         navigationController?.navigationBar.isHidden = true
     }
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
         navigationController?.navigationBar.isHidden = false
     }
     override func viewDidLoad() {
