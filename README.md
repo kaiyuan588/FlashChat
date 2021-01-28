@@ -1,7 +1,9 @@
 
 # Flash-Chat
 
-## My Goal
+## The App
 
-One of the most fundamental component of modern iOS apps is the Table View. Table Views are used everywhere from the Mail app to the Messages app. It’s a crucial part of every iOS developer’s tool belt. In this tutorial we’ll be getting to grips with Table Views, creating custom cells, and making our own cloud-based backend database. It’s going to be epic, so buckle up.
+1. Using Firebase to Auth user login and logout as well as register new user
+
+2. Using Firebase to store message data of users that sent
 
