@@ -1,0 +1,48 @@
+package edu.neu.coe.info6205.symbolTable;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class BSTDeletion {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BSTdetail<Integer, Integer> bst = new BSTSimple<>();
+		Random rd = new Random();
+		Integer[] random_Array = new Integer[100];
+		Integer[] random_Array2 = new Integer[100];
+		for(int i =0; i<100; i++) {
+			random_Array[i] = rd.nextInt(100);
+		}
+		for(int j =0; j<100; j++) {
+			random_Array2[j] = rd.nextInt(100);
+		}
+	
+		int gen = 0;
+//		while(gen==0) {
+			int num = rd.nextInt(2);
+			if(num == 0) {
+				for(int temp = 0; temp<100; temp++) {
+					for(int temp2 = 0; temp2<100; temp2++) {
+						bst.put(random_Array[temp], random_Array[temp2]);
+					
+					}
+				}
+				System.out.println(bst);
+				System.out.println("Height is "+bst.findHeight()+ "//////");
+			}else {
+				for(int temp3 = 0; temp3 < 100; temp3++) {
+					bst.delete(random_Array[temp3]);
+				}
+				System.out.println("deleted" + bst);
+				System.out.println("Height is "+bst.findHeight());
+				
+			}
+//		}
+	
+		
+		//System.out.println(bst.size());
+		
+	}
+
+}

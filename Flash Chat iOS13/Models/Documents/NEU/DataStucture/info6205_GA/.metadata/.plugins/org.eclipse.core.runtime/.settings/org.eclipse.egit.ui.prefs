@@ -1,0 +1,5 @@
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\n<messages>\n<message>aaa&\#x0A;&\#x0A;Conflicts\:&\#x0A;&\#x09;final/info6205_FinalProject/resources/log4j.log&\#x0A;&\#x09;final/info6205_FinalProject/src/main/ga/Driver.java&\#x0A;</message>\n<message>update</message>\n<message>updated</message>\n<message>test</message>\n<message>multi thread</message>\n<message>edit</message>\n<message>log</message>\n<message>RankTest</message>\n<message>Fitness Test</message>\n<message>\# WARNING\: head commit changed in the meantime&\#x0A;&\#x0A;change</message>\n</messages>
+eclipse.preferences.version=1
+resourcehistory_graph_split=500,500
+resourcehistory_rev_split=700,300
+show_initial_config_dialog=false

@@ -1,0 +1,65 @@
+package edu.neu.coe.info6205.symbolTable;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+
+public class BSTDeletion {
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int fin = 0;
+		double totalDepth = 0.0;
+		
+			BSTdetail<Integer, Integer> bst = new BSTSimple<>();
+			int n = 100;
+			//Random			
+			ArrayList<Integer> random_Array = new ArrayList<Integer>();
+			ArrayList<Integer> random_Array3 = new ArrayList<Integer>();
+			//Add nums into list
+			for(int i =0; i< n; i++) {
+				random_Array.add(i);
+				random_Array3.add(i);
+				Collections.shuffle(random_Array);
+				Collections.shuffle(random_Array);
+				
+			}
+			//initialize the Tree;
+			for(int a = 0; a < n; a++) {
+				bst.put(random_Array.get(a), 20);
+			}
+			System.out.println(bst.size());
+			//Test Demo
+			while(fin < 100) {
+			//System.out.println(bst);
+			//Insertion Or Deletion
+			for(int m = 0; m < 8000; m++) {
+				Random r = new Random();
+				int num = r.nextInt(2);
+				if(num == 0) {
+					for(int temp = 0; temp < n; temp ++) {
+							bst.put(r.nextInt(n), 20);				
+					}
+				}else {
+					for(int temp3 = 0; temp3 < n; temp3++) {
+						bst.delete(r.nextInt(n));
+					}
+				}
+			
+			}
+			System.out.println("final depth = "+ "  "+ totalDepth / 100);
+			System.out.println("final size = "+ "   "+ bst.size());
+		
+			totalDepth = totalDepth + bst.findHeight();
+			fin++;
+		}
+
+		
+	}
+		
+
+}

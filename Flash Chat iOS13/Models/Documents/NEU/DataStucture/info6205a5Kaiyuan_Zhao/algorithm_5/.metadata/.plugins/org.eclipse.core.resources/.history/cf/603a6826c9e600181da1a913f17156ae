@@ -1,0 +1,90 @@
+package edu.neu.coe.info6205.symbolTable;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+
+public class BSTDeletion {
+	
+//	public static void swap(Integer[] a, int s, int w) {
+//		int sw = a[s];
+//		a[s] = a[w];
+//		a[w] = a[sw];
+//	}
+//	public static void shuffle(Integer[] random_Array) {
+//		int n = random_Array.length;
+//		Random r = new Random();
+//		
+//		for(int temp = 0; temp<n; temp++) {
+//				 int sh = r.nextInt(n);
+//			swap(random_Array,temp,sh);
+//		}
+//	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BSTdetail<Integer, Integer> bst = new BSTSimple<>();
+	
+		
+		
+		int n = 50;
+	
+		
+		ArrayList<Integer> random_Array = new ArrayList<Integer>();
+		ArrayList<Integer> random_Array3 = new ArrayList<Integer>();
+		//Add nums into list
+		for(int i =0; i< n; i++) {
+			random_Array.add(i);
+			random_Array3.add(i);
+		}
+		Collections.shuffle(random_Array);
+		Collections.shuffle(random_Array);
+		
+		//initialize the Tree;
+		for(int a = 0; a < n; a++) {
+			bst.put(random_Array.get(a), 20);
+		}
+
+		System.out.println(bst);
+
+		
+		for(int m = 0; m < 1000; m++) {
+			int num = rd.nextInt(2);
+			if(num == 0) {
+				for(int temp = 0; temp < n; temp ++) {
+					for(int temp2 = 0 ; temp2 < n; temp2++) {
+						bst.put(random_Array[temp], 20);			
+					}
+				}
+//				System.out.println(bst);
+//				System.out.println("Insertion Height is " +"   "  + bst.findHeight() + "   "+"Insertion Size is " + "   "+bst.size());
+			}else {
+				for(int temp3 = 0; temp3 < n; temp3++) {
+					bst.delete(random_Array3[temp3]);
+				}
+//				System.out.println(bst);
+//				System.out.println("Deletion Height is " + bst.findHeight() + "Deletion Size is " + bst.size());
+			}
+		
+		}
+		System.out.println("final depth = "+ "  "+bst.findHeight());
+		System.out.println("final size = "+ "   "+bst.size());
+		
+//		for(int i =0; i< 1000; i++) {
+//			random_Array.add(i);
+//			
+//		}
+//
+//		Collections.shuffle(random_Array);
+//
+//		Collections.sort(random_Array);
+//		for(int j = 0; j< 1000; j++) {
+//			System.out.println(random_Array.get(j));
+//		}
+
+		
+	}
+
+}
